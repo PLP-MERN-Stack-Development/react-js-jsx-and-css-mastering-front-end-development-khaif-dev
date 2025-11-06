@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import TaskCard from "../components/card";
-import { fetchTasks, deleteTasks, updateTasks } from "../lib/API";
+// import { fetchTasks, deleteTasks, updateTasks } from "../lib/API";
+import useLocalStorage from "../hooks/useLocalStorage";
+import { fetchTasks, updateTasks, deleteTasks } from "../lib/localTasks";
+
 
 function ActiveTasks() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useLocalStorage("tasks", []);
 
   // Fetch only active tasks
   useEffect(() => {

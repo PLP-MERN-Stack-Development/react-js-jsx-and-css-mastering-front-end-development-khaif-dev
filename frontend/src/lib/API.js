@@ -1,3 +1,4 @@
+// get data from backend using CRUD operations
 const API = import.meta.env.VITE_API_URL;
 
 export async function fetchTasks (){

@@ -29,7 +29,7 @@ function Modal({open, onClose, onSubmit, children}){
 
             </div>
             {/* the modal */}
-            <div className={`bg-white rounded-md p-8  w-xl shadow-xl 
+            <div className={`border-2git dark:border-gray-400 rounded-md p-8  w-xl shadow-xl 
                             ${open? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
                 <form className="flex flex-col gap-4" onSubmit={handleSubmit} >
                     
@@ -42,16 +42,16 @@ function Modal({open, onClose, onSubmit, children}){
                         name="task"
                         value={form.task}
                         onChange={handleChange}
-                        className="border-b-2 border-gray-400" />
+                        className="border-b-2 dark:border-gray-400 " />
 
                     <textarea 
                         name="description"
                         value={form.description}
                         onChange={handleChange}
                         placeholder="Add description"
-                        className="border-2 border-gray-400 p-2"></textarea>
+                        className="border-2 border-gray-400 p-2 "></textarea>
 
-                    <select name="priority" className="p-2" value={form.priority} onChange={handleChange}>
+                    <select name="priority" className="p-2 text-black-600" value={form.priority} onChange={handleChange}>
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
                         <option value="High">High</option>
